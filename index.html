@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noluba Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .app-list {
+            list-style: none;
+        }
+        .app-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .app-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .app-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .app-links a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+        .app-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Noluba Apps</h1>
+
+        <ul class="app-list">
+            <li class="app-item">
+                <div class="app-name">SSH SAMURAI</div>
+                <div class="app-description">iOS向けSSHクライアントアプリ</div>
+                <div class="app-links">
+                    <a href="ssh-samurai/privacy-policy.html">プライバシーポリシー</a>
+                </div>
+            </li>
+        </ul>
+
+        <footer>
+            &copy; 2025 Noluba Apps
+        </footer>
+    </div>
+</body>
+</html>
