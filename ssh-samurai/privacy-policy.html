@@ -14,35 +14,33 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
             color: #333;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #3949ab 0%, #1a237e 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .hero .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            opacity: 0.9;
-        }
-        .content {
-            background: white;
-            border-radius: 12px;
+            margin: 0 auto 40px;
             padding: 40px;
-            margin-top: -20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         h2 {
-            color: #1a1a2e;
+            color: #1a237e;
             font-size: 1.4rem;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -62,31 +60,56 @@
         li {
             margin-bottom: 8px;
         }
+        a {
+            color: #3949ab;
+        }
+        a:hover {
+            color: #1a237e;
+        }
         .highlight {
-            background-color: #f0f7ff;
-            border-left: 4px solid #1a1a2e;
+            background-color: #f0f4ff;
+            border-left: 4px solid #3949ab;
             padding: 15px 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
         }
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #666;
-            font-size: 0.9rem;
-        }
         .update-date {
-            background-color: #e8f4e8;
+            background-color: #e8f0fe;
             padding: 10px 15px;
             border-radius: 8px;
             display: inline-block;
             margin-bottom: 20px;
+            color: #1a237e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3949ab;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #3949ab;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: #3949ab;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.9);
         }
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
+            .hero h1 {
+                font-size: 1.8rem;
             }
-            .content {
+            .container {
+                margin: 0 16px 40px;
                 padding: 25px;
             }
             h2 {
@@ -96,82 +119,82 @@
     </style>
 </head>
 <body>
-    <header>
+    <div class="hero">
         <h1>SSH SAMURAI</h1>
-        <p>プライバシーポリシー</p>
-    </header>
+        <p class="tagline">プライバシーポリシー</p>
+    </div>
 
     <div class="container">
-        <div class="content">
-            <div class="update-date">
-                最終更新日: 2026年2月15日
-            </div>
+        <a href="../" class="back-link">← トップページに戻る</a>
 
-            <h2>はじめに</h2>
-            <p>SSH SAMURAI（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーでは、本アプリがどのような情報を収集し、どのように使用するかについて説明します。</p>
-
-            <h2>収集する情報</h2>
-            <p>本アプリは、SSH接続を行うために以下の情報をユーザーの端末内に保存します：</p>
-            <ul>
-                <li>SSHサーバーのホスト名・IPアドレス</li>
-                <li>ポート番号</li>
-                <li>ユーザー名</li>
-                <li>パスワード（暗号化して保存）</li>
-                <li>SSH秘密鍵（暗号化して保存）</li>
-            </ul>
-
-            <div class="highlight">
-                <strong>重要：</strong>これらの情報はすべてユーザーの端末内（iOSのKeychain）に安全に保存され、外部サーバーには一切送信されません。
-            </div>
-
-            <h2>情報の使用目的</h2>
-            <p>収集した情報は、以下の目的でのみ使用されます：</p>
-            <ul>
-                <li>SSHサーバーへの接続を確立するため</li>
-                <li>保存した接続情報を再利用し、利便性を向上させるため</li>
-            </ul>
-
-            <h2>広告について</h2>
-            <p>本アプリでは、Google AdMobによる広告を表示しています。Google AdMobは、広告配信のためにデバイス識別子（IDFA）などの情報を使用する場合があります。</p>
-            <p>Googleのプライバシーポリシーについては、以下をご参照ください：</p>
-            <ul>
-                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></li>
-            </ul>
-
-            <h2>第三者への情報提供</h2>
-            <p>本アプリは、広告サービスを除き、ユーザーの個人情報を第三者に提供、販売、共有することはありません。SSH接続情報は端末内にのみ保存され、開発者を含む第三者がアクセスすることはできません。</p>
-
-            <h2>データのセキュリティ</h2>
-            <p>本アプリは、以下のセキュリティ対策を講じています：</p>
-            <ul>
-                <li>パスワードおよび秘密鍵はiOSのKeychainを使用して暗号化保存</li>
-                <li>SSH接続は暗号化された通信プロトコルを使用</li>
-                <li>接続情報をログに出力しない設計</li>
-            </ul>
-
-            <h2>お子様のプライバシー</h2>
-            <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
-
-            <h2>ユーザーの権利</h2>
-            <p>ユーザーは以下の権利を有しています：</p>
-            <ul>
-                <li>保存された接続情報をいつでも削除できます</li>
-                <li>アプリをアンインストールすることで、すべてのデータを削除できます</li>
-            </ul>
-
-            <h2>プライバシーポリシーの変更</h2>
-            <p>本プライバシーポリシーは、必要に応じて更新されることがあります。重要な変更がある場合は、アプリ内またはこのページでお知らせします。</p>
-
-            <h2>お問い合わせ</h2>
-            <p>本プライバシーポリシーに関するご質問やご意見がございましたら、以下の連絡先までお問い合わせください：</p>
-            <ul>
-                <li><a href="https://noluba.com/ssh-samurai/contact" target="_blank" rel="noopener">お問い合わせフォーム</a></li>
-            </ul>
+        <div class="update-date">
+            最終更新日: 2026年2月15日
         </div>
+
+        <h2>はじめに</h2>
+        <p>SSH SAMURAI（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーでは、本アプリがどのような情報を収集し、どのように使用するかについて説明します。</p>
+
+        <h2>収集する情報</h2>
+        <p>本アプリは、SSH接続を行うために以下の情報をユーザーの端末内に保存します：</p>
+        <ul>
+            <li>SSHサーバーのホスト名・IPアドレス</li>
+            <li>ポート番号</li>
+            <li>ユーザー名</li>
+            <li>パスワード（暗号化して保存）</li>
+            <li>SSH秘密鍵（暗号化して保存）</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>重要：</strong>これらの情報はすべてユーザーの端末内（iOSのKeychain）に安全に保存され、外部サーバーには一切送信されません。
+        </div>
+
+        <h2>情報の使用目的</h2>
+        <p>収集した情報は、以下の目的でのみ使用されます：</p>
+        <ul>
+            <li>SSHサーバーへの接続を確立するため</li>
+            <li>保存した接続情報を再利用し、利便性を向上させるため</li>
+        </ul>
+
+        <h2>広告について</h2>
+        <p>本アプリでは、Google AdMobによる広告を表示しています。Google AdMobは、広告配信のためにデバイス識別子（IDFA）などの情報を使用する場合があります。</p>
+        <p>Googleのプライバシーポリシーについては、以下をご参照ください：</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a></li>
+        </ul>
+
+        <h2>第三者への情報提供</h2>
+        <p>本アプリは、広告サービスを除き、ユーザーの個人情報を第三者に提供、販売、共有することはありません。SSH接続情報は端末内にのみ保存され、開発者を含む第三者がアクセスすることはできません。</p>
+
+        <h2>データのセキュリティ</h2>
+        <p>本アプリは、以下のセキュリティ対策を講じています：</p>
+        <ul>
+            <li>パスワードおよび秘密鍵はiOSのKeychainを使用して暗号化保存</li>
+            <li>SSH接続は暗号化された通信プロトコルを使用</li>
+            <li>接続情報をログに出力しない設計</li>
+        </ul>
+
+        <h2>お子様のプライバシー</h2>
+        <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+
+        <h2>ユーザーの権利</h2>
+        <p>ユーザーは以下の権利を有しています：</p>
+        <ul>
+            <li>保存された接続情報をいつでも削除できます</li>
+            <li>アプリをアンインストールすることで、すべてのデータを削除できます</li>
+        </ul>
+
+        <h2>プライバシーポリシーの変更</h2>
+        <p>本プライバシーポリシーは、必要に応じて更新されることがあります。重要な変更がある場合は、アプリ内またはこのページでお知らせします。</p>
+
+        <h2>お問い合わせ</h2>
+        <p>本プライバシーポリシーに関するご質問やご意見がございましたら、以下の連絡先までお問い合わせください：</p>
+        <ul>
+            <li><a href="https://noluba.com/ssh-samurai/contact" target="_blank" rel="noopener">お問い合わせフォーム</a></li>
+        </ul>
     </div>
 
     <footer>
-        <p>&copy; 2026 SSH SAMURAI. All rights reserved.</p>
+        &copy; 2025 Noluba Apps
     </footer>
 </body>
 </html>
