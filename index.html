@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noluba Apps</title>
+    <title>SSH SAMURAI - iOS向けSSHクライアント</title>
+    <meta name="description" content="SSH SAMURAIは、iOSデバイスから簡単にSSHサーバーに接続できるクライアントアプリです。">
     <style>
         * {
             margin: 0;
@@ -14,85 +15,146 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3949ab 0%, #1a237e 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .hero .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
         }
         .container {
-            max-width: 600px;
-            margin: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
             padding: 40px;
             background: white;
             border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
+        h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
         }
-        .app-list {
-            list-style: none;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
-        .app-item {
-            background: #f8f9fa;
+        .feature {
+            background: #f5f5f5;
+            padding: 24px;
             border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
         }
-        .app-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .app-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #1a1a2e;
-            margin-bottom: 8px;
-        }
-        .app-description {
-            font-size: 0.9rem;
-            color: #666;
+        .feature-icon {
+            font-size: 2.5rem;
             margin-bottom: 12px;
         }
-        .app-links a {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 0.9rem;
+        .feature h3 {
+            font-size: 1.1rem;
+            color: #1a237e;
+            margin-bottom: 8px;
         }
-        .app-links a:hover {
-            text-decoration: underline;
+        .feature p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .description {
+            margin-bottom: 40px;
+        }
+        .description p {
+            margin-bottom: 16px;
+            color: #555;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .links a {
+            color: #3949ab;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #3949ab;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .links a:hover {
+            background: #3949ab;
+            color: white;
         }
         footer {
             text-align: center;
-            margin-top: 30px;
-            color: #999;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
             font-size: 0.85rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.9);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Noluba Apps</h1>
-
-        <ul class="app-list">
-            <li class="app-item">
-                <div class="app-name">SSH SAMURAI</div>
-                <div class="app-description">iOS向けSSHクライアントアプリ</div>
-                <div class="app-links">
-                    <a href="ssh-samurai/privacy-policy.html">プライバシーポリシー</a>
-                </div>
-            </li>
-        </ul>
-
-        <footer>
-            &copy; 2025 Noluba Apps
-        </footer>
+    <div class="hero">
+        <h1>SSH SAMURAI</h1>
+        <p class="tagline">iOSデバイスから簡単にSSH接続</p>
     </div>
+
+    <div class="container">
+        <section class="description">
+            <h2>アプリについて</h2>
+            <p>SSH SAMURAIは、iPhone・iPadからSSHサーバーに接続できるターミナルクライアントアプリです。サーバー管理やリモート作業を、いつでもどこでも手軽に行えます。</p>
+        </section>
+
+        <section>
+            <h2>主な機能</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">&#128273;</div>
+                    <h3>秘密鍵認証</h3>
+                    <p>パスワード認証に加え、秘密鍵を使った安全な認証に対応</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128187;</div>
+                    <h3>フルターミナル</h3>
+                    <p>本格的なターミナルエミュレーターで快適に操作</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128190;</div>
+                    <h3>接続管理</h3>
+                    <p>複数のサーバー接続情報を保存・管理</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>コマンド保存</h3>
+                    <p>よく使うコマンドを保存してワンタップで実行</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="links">
+            <a href="ssh-samurai/privacy-policy.html">プライバシーポリシー</a>
+            <a href="ssh-samurai/terms-of-service.html">利用規約</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Noluba Apps
+    </footer>
 </body>
 </html>
