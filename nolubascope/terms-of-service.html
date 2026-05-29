@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 / Terms of Service - NolubaScope</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #1f2937 0%, #0a0a0f 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+        .hero .app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #1f2937;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #84cc16;
+        }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #65a30d; }
+        a:hover { color: #4d7c0f; }
+        .update-date {
+            background-color: #ecfccb;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #365314;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.9); }
+
+        /* ---------- 言語切替（CSS のみ） ---------- */
+        .lang-radio { position: absolute; left: -9999px; }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 0 auto 28px;
+        }
+        .tab {
+            padding: 8px 24px;
+            cursor: pointer;
+            border-radius: 7px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+            user-select: none;
+        }
+        .tab:hover { color: #1f2937; }
+
+        .title-ja, .title-en, .content-ja, .content-en { display: none; }
+
+        #lang-ja:checked ~ .hero .title-ja,
+        #lang-ja:checked ~ .container .content-ja,
+        #lang-en:checked ~ .hero .title-en,
+        #lang-en:checked ~ .container .content-en { display: block; }
+
+        #lang-ja:checked ~ .container .tabs label[for="lang-ja"],
+        #lang-en:checked ~ .container .tabs label[for="lang-en"] {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="lang" id="lang-ja" class="lang-radio" checked>
+    <input type="radio" name="lang" id="lang-en" class="lang-radio">
+
+    <div class="hero">
+        <img src="icon.png" alt="NolubaScope" class="app-icon">
+        <h1 class="title-ja">利用規約</h1>
+        <h1 class="title-en">Terms of Service</h1>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <label class="tab" for="lang-ja">日本語</label>
+            <label class="tab" for="lang-en">English</label>
+        </div>
+
+        <!-- ============== 日本語 ============== -->
+        <div class="content-ja">
+            <p>この利用規約（以下「本規約」といいます）は、Noluba, LLC.（以下「当社」といいます）が提供するiOS向けアプリケーション「NolubaScope」（以下「本サービス」といいます）の利用条件を定めるものです。本サービスを利用するユーザー（以下「ユーザー」といいます）は、本規約に同意の上、本サービスを利用するものとします。</p>
+
+            <h2>1. 適用</h2>
+            <p>本規約は、ユーザーと当社との間の本サービスに関する一切の関係に適用されます。</p>
+
+            <h2>2. 利用登録</h2>
+            <p>本サービスの利用を希望する方は、本規約に同意の上、当社が定める方法により利用登録を申請するものとします。当社は、申請者が以下のいずれかに該当すると判断した場合、利用登録を承認しないことがあります。</p>
+            <ul>
+                <li>虚偽の事項を届け出た場合</li>
+                <li>過去に本規約に違反したことがある場合</li>
+                <li>13歳未満の場合</li>
+                <li>その他、当社が利用登録を相当でないと判断した場合</li>
+            </ul>
+
+            <h2>3. ユーザーID・パスワードの管理</h2>
+            <p>ユーザーは、自己の責任において、本サービスのユーザーIDおよびパスワードを管理するものとします。ユーザーは、いかなる場合にも、ユーザーIDおよびパスワードを第三者に譲渡または貸与してはならず、第三者と共用してはなりません。</p>
+
+            <h2>4. 投稿コンテンツ</h2>
+            <p>ユーザーが本サービスに投稿した動画、コメントその他のコンテンツ（以下「投稿コンテンツ」といいます）の著作権その他の権利は、当該ユーザーに帰属します。ただし、ユーザーは、当社に対し、投稿コンテンツを本サービスの提供、改善、宣伝等の目的で、無償かつ非独占的に利用すること（複製、公衆送信、翻案等を含む）を許諾するものとします。</p>
+            <p>ユーザーは、投稿コンテンツについて、自らが投稿、利用、利用許諾する適法な権利を有していること、および投稿コンテンツが第三者の権利を侵害していないことを表明・保証するものとします。</p>
+
+            <h2>5. 禁止事項</h2>
+            <p>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
+            <ul>
+                <li>法令または公序良俗に違反する行為</li>
+                <li>犯罪行為に関連する行為</li>
+                <li>第三者の知的財産権、肖像権、プライバシー、名誉、信用その他の権利または利益を侵害する行為</li>
+                <li>当社のサーバーまたはネットワークの機能を破壊・妨害する行為</li>
+                <li>本サービスの運営を妨害するおそれのある行為</li>
+                <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
+                <li>不正アクセスをし、またはこれを試みる行為</li>
+                <li>他のユーザーになりすます行為</li>
+                <li>当社が許諾しない方法での本サービスを通じた営業活動、宣伝、広告、勧誘その他営利を目的とする行為</li>
+                <li>反社会的勢力等への利益供与</li>
+                <li>暴力的、性的、人種差別的、その他不適切なコンテンツの投稿</li>
+                <li>危険な行為を助長するコンテンツの投稿</li>
+                <li>その他、当社が不適切と判断する行為</li>
+            </ul>
+
+            <h2>6. 本サービスの提供の停止</h2>
+            <p>当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく、本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
+            <ul>
+                <li>本サービスにかかるシステムの保守点検または更新を行う場合</li>
+                <li>地震、落雷、火災、停電または天災等の不可抗力により、本サービスの提供が困難となった場合</li>
+                <li>コンピュータまたは通信回線等が事故により停止した場合</li>
+                <li>その他、当社が本サービスの提供が困難と判断した場合</li>
+            </ul>
+
+            <h2>7. 利用制限および登録抹消</h2>
+            <p>当社は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、投稿コンテンツの削除、当該ユーザーに対する本サービスの利用制限、または登録抹消（アカウント削除）等の処置を講じることができるものとします。</p>
+            <ul>
+                <li>本規約のいずれかの条項に違反した場合</li>
+                <li>登録事項に虚偽の事実があることが判明した場合</li>
+                <li>当社からの連絡に対し、相当期間返答がない場合</li>
+                <li>本サービスについて、最終の利用から相当期間利用がない場合</li>
+                <li>その他、当社が本サービスの利用を適当でないと判断した場合</li>
+            </ul>
+
+            <h2>8. 退会</h2>
+            <p>ユーザーは、当社の定める方法により、本サービスから退会できるものとします。</p>
+
+            <h2>9. 保証の否認および免責事項</h2>
+            <p>当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます）がないことを明示的にも黙示的にも保証しておりません。</p>
+            <p>当社は、本サービスに起因してユーザーに生じたあらゆる損害について、当社の故意または重過失による場合を除き、一切の責任を負いません。</p>
+            <p>ユーザー間または第三者との間で生じた紛争について、当社は一切責任を負わないものとし、ユーザー自身の責任でこれを解決するものとします。</p>
+
+            <h2>10. サービス内容の変更</h2>
+            <p>当社は、ユーザーへの事前の通知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。</p>
+
+            <h2>11. 利用規約の変更</h2>
+            <p>当社は、必要と判断した場合には、本規約を変更することができるものとします。本規約の変更後に本サービスを利用したユーザーは、変更後の本規約に同意したものとみなします。</p>
+
+            <h2>12. 個人情報の取扱い</h2>
+            <p>当社は、本サービスの利用によって取得する個人情報については、当社のプライバシーポリシーに従って適切に取り扱うものとします。</p>
+
+            <h2>13. 準拠法・裁判管轄</h2>
+            <p>本規約の解釈にあたっては、日本法を準拠法とします。本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</p>
+
+            <h2>14. お問い合わせ</h2>
+            <p>本規約に関するお問い合わせは、以下までご連絡ください。</p>
+            <p>Noluba, LLC.<br>メール: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <div class="update-date">制定日: 2026年5月30日<br>最終更新日: 2026年5月30日</div>
+        </div>
+
+        <!-- ============== English ============== -->
+        <div class="content-en">
+            <p>These Terms of Service (these "Terms") govern the conditions of use of the iOS application "NolubaScope" (the "Service") provided by Noluba, LLC. ("we"). Users of the Service ("Users") agree to these Terms upon using the Service.</p>
+
+            <h2>1. Application</h2>
+            <p>These Terms apply to all relationships between Users and us concerning the Service.</p>
+
+            <h2>2. Registration</h2>
+            <p>Those wishing to use the Service must agree to these Terms and apply for registration via the method we designate. We may decline registration if we determine that the applicant falls under any of the following:</p>
+            <ul>
+                <li>Has submitted false information</li>
+                <li>Has violated these Terms in the past</li>
+                <li>Is under 13 years of age</li>
+                <li>Other cases where we deem registration inappropriate</li>
+            </ul>
+
+            <h2>3. Management of User ID and Password</h2>
+            <p>Users shall manage their User ID and password for the Service at their own responsibility. Users must not transfer, lend, or share their User ID and password with any third party under any circumstance.</p>
+
+            <h2>4. Posted Content</h2>
+            <p>Copyrights and other rights to videos, comments, and other content posted by Users ("Posted Content") belong to the respective User. However, Users grant us a non-exclusive, royalty-free license to use Posted Content (including reproduction, public transmission, and adaptation) for purposes of providing, improving, and promoting the Service.</p>
+            <p>Users represent and warrant that they have the legitimate right to post, use, and license the Posted Content, and that the Posted Content does not infringe any third party's rights.</p>
+
+            <h2>5. Prohibited Activities</h2>
+            <p>Users must not engage in any of the following activities when using the Service:</p>
+            <ul>
+                <li>Acts that violate laws or public order and morals</li>
+                <li>Acts related to criminal activity</li>
+                <li>Acts that infringe upon a third party's intellectual property rights, portrait rights, privacy, honor, reputation, or other rights or interests</li>
+                <li>Acts that damage or interfere with our servers or networks</li>
+                <li>Acts that may interfere with the operation of the Service</li>
+                <li>Acts of collecting or accumulating personal information of other Users</li>
+                <li>Unauthorized access or attempts thereof</li>
+                <li>Impersonating other Users</li>
+                <li>Business activities, promotion, advertising, solicitation, or other for-profit activities through the Service in a manner not approved by us</li>
+                <li>Providing benefits to anti-social forces</li>
+                <li>Posting violent, sexual, racist, or otherwise inappropriate content</li>
+                <li>Posting content that encourages dangerous activities</li>
+                <li>Other acts that we deem inappropriate</li>
+            </ul>
+
+            <h2>6. Suspension of Service</h2>
+            <p>We may suspend or interrupt all or part of the Service without prior notice to Users if we determine any of the following:</p>
+            <ul>
+                <li>When performing system maintenance or updates for the Service</li>
+                <li>When provision of the Service becomes difficult due to force majeure including earthquakes, lightning, fire, power outage, or natural disasters</li>
+                <li>When computers or communication lines stop due to accidents</li>
+                <li>Other cases where we determine that provision of the Service is difficult</li>
+            </ul>
+
+            <h2>7. Usage Restrictions and Account Termination</h2>
+            <p>We may, without prior notice, take measures such as deleting Posted Content, restricting the User's use of the Service, or terminating the User's account if the User falls under any of the following:</p>
+            <ul>
+                <li>Has violated any provision of these Terms</li>
+                <li>It is found that registration information contains false information</li>
+                <li>There is no response to our contact for a considerable period</li>
+                <li>There has been no use of the Service for a considerable period since the last use</li>
+                <li>Other cases where we determine that the use of the Service is inappropriate</li>
+            </ul>
+
+            <h2>8. Withdrawal</h2>
+            <p>Users may withdraw from the Service via the method we designate.</p>
+
+            <h2>9. Disclaimer of Warranties and Limitation of Liability</h2>
+            <p>We do not warrant, expressly or impliedly, that the Service is free from defects in fact or in law (including defects, errors, bugs, and infringement of rights regarding safety, reliability, accuracy, completeness, validity, fitness for a particular purpose, and security).</p>
+            <p>Except in cases of our willful misconduct or gross negligence, we accept no liability for any damages incurred by Users arising from the Service.</p>
+            <p>We accept no liability for disputes between Users or with third parties, and Users shall resolve them at their own responsibility.</p>
+
+            <h2>10. Changes to Service Content</h2>
+            <p>We may change, add, or discontinue the content of the Service with prior notice to Users, and Users consent to this.</p>
+
+            <h2>11. Changes to Terms</h2>
+            <p>We may change these Terms when we deem it necessary. Users who use the Service after the changes are deemed to have agreed to the revised Terms.</p>
+
+            <h2>12. Handling of Personal Information</h2>
+            <p>Personal information obtained through the use of the Service will be handled appropriately in accordance with our Privacy Policy.</p>
+
+            <h2>13. Governing Law and Jurisdiction</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of Japan. Any dispute arising in connection with the Service shall be subject to the exclusive jurisdiction of the court having jurisdiction over our principal place of business.</p>
+
+            <h2>14. Contact</h2>
+            <p>For inquiries about these Terms, please contact:</p>
+            <p>Noluba, LLC.<br>Email: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <div class="update-date">Effective: May 30, 2026<br>Last updated: May 30, 2026</div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Noluba, LLC. &nbsp;|&nbsp; <a href="../index.html">Top</a>
+    </footer>
+</body>
+</html>

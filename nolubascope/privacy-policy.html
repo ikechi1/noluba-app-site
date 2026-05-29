@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - NolubaScope</title>
+    <title>プライバシーポリシー / Privacy Policy - NolubaScope</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
@@ -31,12 +27,7 @@
         }
         .hero h1 {
             font-size: 2.5rem;
-            margin-bottom: 16px;
             font-weight: 700;
-        }
-        .hero .tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
         }
         .container {
             max-width: 800px;
@@ -54,31 +45,18 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #84cc16;
         }
-        h2:first-of-type {
-            margin-top: 0;
-        }
+        h2:first-of-type { margin-top: 0; }
         h3 {
             color: #374151;
             font-size: 1.1rem;
             margin-top: 20px;
             margin-bottom: 10px;
         }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #65a30d;
-        }
-        a:hover {
-            color: #4d7c0f;
-        }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #65a30d; }
+        a:hover { color: #4d7c0f; }
         .highlight {
             background-color: #f7fee7;
             border-left: 4px solid #84cc16;
@@ -107,173 +85,254 @@
             font-size: 0.95rem;
             vertical-align: top;
         }
-        th {
-            background-color: #f3f4f6;
-            font-weight: 600;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .back-link:hover {
-            color: white;
-        }
+        th { background-color: #f3f4f6; font-weight: 600; }
         footer {
             text-align: center;
             padding: 20px;
             color: rgba(255,255,255,0.7);
             font-size: 0.85rem;
         }
-        footer a {
-            color: rgba(255,255,255,0.9);
+        footer a { color: rgba(255,255,255,0.9); }
+
+        /* ---------- 言語切替（CSS のみ） ---------- */
+        .lang-radio { position: absolute; left: -9999px; }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 0 auto 28px;
+        }
+        .tab {
+            padding: 8px 24px;
+            cursor: pointer;
+            border-radius: 7px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+            user-select: none;
+        }
+        .tab:hover { color: #1f2937; }
+
+        .title-ja, .title-en, .content-ja, .content-en { display: none; }
+
+        #lang-ja:checked ~ .hero .title-ja,
+        #lang-ja:checked ~ .container .content-ja,
+        #lang-en:checked ~ .hero .title-en,
+        #lang-en:checked ~ .container .content-en { display: block; }
+
+        #lang-ja:checked ~ .container .tabs label[for="lang-ja"],
+        #lang-en:checked ~ .container .tabs label[for="lang-en"] {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
+    <input type="radio" name="lang" id="lang-ja" class="lang-radio" checked>
+    <input type="radio" name="lang" id="lang-en" class="lang-radio">
+
     <div class="hero">
-        <img src="icon.png" alt="NolubaScope アイコン" class="app-icon">
-        <h1>プライバシーポリシー</h1>
-        <p class="tagline">NolubaScope</p>
+        <img src="icon.png" alt="NolubaScope" class="app-icon">
+        <h1 class="title-ja">プライバシーポリシー</h1>
+        <h1 class="title-en">Privacy Policy</h1>
     </div>
 
     <div class="container">
-        <p>Noluba, LLC.（以下「当社」といいます）は、当社が提供するiOS向けアプリケーション「NolubaScope」（以下「本アプリ」といいます）におけるユーザーの個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます）を定めます。</p>
-
-        <h2>1. 取得する情報</h2>
-        <p>本アプリでは、サービス提供のために以下の情報を取得します。</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>分類</th>
-                    <th>取得する情報</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>アカウント情報</td>
-                    <td>メールアドレス、ユーザー名（表示名）、パスワード（ハッシュ化して保存）</td>
-                </tr>
-                <tr>
-                    <td>Googleログイン経由の情報</td>
-                    <td>Googleアカウントのメールアドレス、表示名、プロフィール画像（ユーザーがGoogleログインを利用する場合のみ）</td>
-                </tr>
-                <tr>
-                    <td>プロフィール情報</td>
-                    <td>アバター画像、自己紹介文、所属チーム名</td>
-                </tr>
-                <tr>
-                    <td>ユーザーコンテンツ</td>
-                    <td>投稿された動画、動画のタイトル・コメント・難易度・練習場所等の付随情報、他ユーザー投稿へのコメント・いいね、フォロー関係</td>
-                </tr>
-                <tr>
-                    <td>識別子</td>
-                    <td>当社が発行するユーザーID</td>
-                </tr>
-                <tr>
-                    <td>利用状況情報</td>
-                    <td>アクセスログ、IPアドレス、OSバージョン、アプリバージョン、利用日時等の技術情報</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="highlight">
-            <strong>位置情報について：</strong>本アプリは、ユーザーの正確な位置情報（GPS）を取得しません。「練習場所」は、ユーザーがテキストとして自由に入力する情報です。
+        <div class="tabs">
+            <label class="tab" for="lang-ja">日本語</label>
+            <label class="tab" for="lang-en">English</label>
         </div>
 
-        <h2>2. 利用目的</h2>
-        <p>取得した情報は、以下の目的で利用します。</p>
-        <ul>
-            <li>本アプリの提供および運営（動画の投稿・配信、コメント機能、フォロー機能、動画比較機能等）</li>
-            <li>ユーザー認証および本人確認</li>
-            <li>不正利用・規約違反の防止、セキュリティ対策</li>
-            <li>ユーザーからのお問い合わせ・サポート対応</li>
-            <li>サービスの品質向上、新機能の開発</li>
-            <li>法令に基づく対応</li>
-        </ul>
+        <!-- ============== 日本語 ============== -->
+        <div class="content-ja">
+            <p>Noluba, LLC.（以下「当社」といいます）は、当社が提供するiOS向けアプリケーション「NolubaScope」（以下「本アプリ」といいます）におけるユーザーの個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます）を定めます。</p>
 
-        <h2>3. 第三者への提供</h2>
-        <p>当社は、以下の場合を除き、取得した個人情報を第三者に提供しません。</p>
-        <ul>
-            <li>ユーザーが「全体公開」設定で投稿した動画・コメント・プロフィール情報を、本アプリ内で他のユーザーが閲覧できる形で表示する場合</li>
-            <li>ユーザーの同意がある場合</li>
-            <li>法令に基づく場合</li>
-            <li>人の生命、身体または財産の保護のために必要であって、ユーザーの同意を得ることが困難な場合</li>
-        </ul>
-        <p>また、本アプリの提供にあたって、以下の外部サービスを利用します。</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>サービス</th>
-                    <th>提供事業者</th>
-                    <th>提供する情報・目的</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Google Sign-In</td>
-                    <td>Google LLC</td>
-                    <td>ユーザー認証（ユーザーがGoogleログインを利用した場合のみ）</td>
-                </tr>
-            </tbody>
-        </table>
+            <h2>1. 取得する情報</h2>
+            <p>本アプリでは、サービス提供のために以下の情報を取得します。</p>
+            <table>
+                <thead><tr><th>分類</th><th>取得する情報</th></tr></thead>
+                <tbody>
+                    <tr><td>アカウント情報</td><td>メールアドレス、ユーザー名（表示名）、パスワード（ハッシュ化して保存）</td></tr>
+                    <tr><td>Googleログイン経由の情報</td><td>Googleアカウントのメールアドレス、表示名、プロフィール画像（ユーザーがGoogleログインを利用する場合のみ）</td></tr>
+                    <tr><td>プロフィール情報</td><td>アバター画像、自己紹介文、所属チーム名</td></tr>
+                    <tr><td>ユーザーコンテンツ</td><td>投稿された動画、動画のタイトル・コメント・難易度・練習場所等の付随情報、他ユーザー投稿へのコメント・いいね、フォロー関係</td></tr>
+                    <tr><td>識別子</td><td>当社が発行するユーザーID</td></tr>
+                    <tr><td>利用状況情報</td><td>アクセスログ、IPアドレス、OSバージョン、アプリバージョン、利用日時等の技術情報</td></tr>
+                </tbody>
+            </table>
+            <div class="highlight"><strong>位置情報について：</strong>本アプリは、ユーザーの正確な位置情報（GPS）を取得しません。「練習場所」は、ユーザーがテキストとして自由に入力する情報です。</div>
 
-        <h2>4. データの保管期間</h2>
-        <p>取得した個人情報は、ユーザーが本アプリのアカウントを保有している期間中、および利用目的の達成に必要な合理的期間にわたって保管します。アカウント削除のご要望をいただいた場合、法令上の保管義務がある情報を除き、合理的な期間内に削除します。</p>
+            <h2>2. 利用目的</h2>
+            <p>取得した情報は、以下の目的で利用します。</p>
+            <ul>
+                <li>本アプリの提供および運営（動画の投稿・配信、コメント機能、フォロー機能、動画比較機能等）</li>
+                <li>ユーザー認証および本人確認</li>
+                <li>不正利用・規約違反の防止、セキュリティ対策</li>
+                <li>ユーザーからのお問い合わせ・サポート対応</li>
+                <li>サービスの品質向上、新機能の開発</li>
+                <li>法令に基づく対応</li>
+            </ul>
 
-        <h2>5. データの保管場所</h2>
-        <p>取得した個人情報は、当社が選定したクラウドサービス事業者のサーバー上に保管されます。サーバーの所在地は日本国内および海外（米国等）となる場合があります。海外保管の場合も、適切なセキュリティ水準を維持します。</p>
+            <h2>3. 第三者への提供</h2>
+            <p>当社は、以下の場合を除き、取得した個人情報を第三者に提供しません。</p>
+            <ul>
+                <li>ユーザーが「全体公開」設定で投稿した動画・コメント・プロフィール情報を、本アプリ内で他のユーザーが閲覧できる形で表示する場合</li>
+                <li>ユーザーの同意がある場合</li>
+                <li>法令に基づく場合</li>
+                <li>人の生命、身体または財産の保護のために必要であって、ユーザーの同意を得ることが困難な場合</li>
+            </ul>
+            <p>また、本アプリの提供にあたって、以下の外部サービスを利用します。</p>
+            <table>
+                <thead><tr><th>サービス</th><th>提供事業者</th><th>提供する情報・目的</th></tr></thead>
+                <tbody>
+                    <tr><td>Google Sign-In</td><td>Google LLC</td><td>ユーザー認証（ユーザーがGoogleログインを利用した場合のみ）</td></tr>
+                </tbody>
+            </table>
 
-        <h2>6. セキュリティ</h2>
-        <p>当社は、取得した個人情報の漏洩、紛失、改ざん等を防止するため、以下の措置を講じます。</p>
-        <ul>
-            <li>通信経路の暗号化（HTTPS）</li>
-            <li>パスワードのハッシュ化保存</li>
-            <li>認証トークンの端末側Keychainでの安全な保管</li>
-            <li>サーバーへの不正アクセス対策</li>
-            <li>取り扱う従業員への教育</li>
-        </ul>
+            <h2>4. データの保管期間</h2>
+            <p>取得した個人情報は、ユーザーが本アプリのアカウントを保有している期間中、および利用目的の達成に必要な合理的期間にわたって保管します。アカウント削除のご要望をいただいた場合、法令上の保管義務がある情報を除き、合理的な期間内に削除します。</p>
 
-        <h2>7. ユーザーの権利</h2>
-        <p>ユーザーは、自己の個人情報について以下の権利を有します。</p>
-        <ul>
-            <li>取得している情報の開示請求</li>
-            <li>誤った情報の訂正・追加・削除請求</li>
-            <li>利用停止・消去請求</li>
-            <li>第三者提供の停止請求</li>
-        </ul>
-        <p>これらのご請求は、本ポリシー末尾のお問い合わせ先までご連絡ください。</p>
+            <h2>5. データの保管場所</h2>
+            <p>取得した個人情報は、当社が選定したクラウドサービス事業者のサーバー上に保管されます。サーバーの所在地は日本国内および海外（米国等）となる場合があります。海外保管の場合も、適切なセキュリティ水準を維持します。</p>
 
-        <h2>8. アカウント削除</h2>
-        <p>ユーザーは、本アプリの設定画面からいつでもアカウントを削除できます。アカウントを削除すると、プロフィール情報・投稿動画・コメント等は、合理的な期間内に当社のサーバーから削除されます。</p>
+            <h2>6. セキュリティ</h2>
+            <p>当社は、取得した個人情報の漏洩、紛失、改ざん等を防止するため、以下の措置を講じます。</p>
+            <ul>
+                <li>通信経路の暗号化（HTTPS）</li>
+                <li>パスワードのハッシュ化保存</li>
+                <li>認証トークンの端末側Keychainでの安全な保管</li>
+                <li>サーバーへの不正アクセス対策</li>
+                <li>取り扱う従業員への教育</li>
+            </ul>
 
-        <h2>9. 子供のプライバシー</h2>
-        <p>本アプリは、13歳未満の児童を対象としていません。当社は、13歳未満の児童から個人情報を取得することを意図していません。保護者の方が、お子様が当社に個人情報を提供したことに気づかれた場合は、お問い合わせ先までご連絡ください。</p>
+            <h2>7. ユーザーの権利</h2>
+            <p>ユーザーは、自己の個人情報について以下の権利を有します。</p>
+            <ul>
+                <li>取得している情報の開示請求</li>
+                <li>誤った情報の訂正・追加・削除請求</li>
+                <li>利用停止・消去請求</li>
+                <li>第三者提供の停止請求</li>
+            </ul>
+            <p>これらのご請求は、本ポリシー末尾のお問い合わせ先までご連絡ください。</p>
 
-        <h2>10. Cookieおよび類似技術</h2>
-        <p>本アプリはネイティブiOSアプリのため、Webブラウザ用のCookieは使用しません。認証維持のため、認証トークンを端末のKeychainに保存します。ユーザー設定情報の一部は端末のUserDefaultsに保存します。</p>
+            <h2>8. アカウント削除</h2>
+            <p>ユーザーは、本アプリの設定画面からいつでもアカウントを削除できます。アカウントを削除すると、プロフィール情報・投稿動画・コメント等は、合理的な期間内に当社のサーバーから削除されます。</p>
 
-        <h2>11. プライバシーポリシーの変更</h2>
-        <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、本アプリ内の通知または当社サイトでお知らせします。変更後も本アプリの利用を継続された場合、変更後の本ポリシーに同意したものとみなします。</p>
+            <h2>9. 子供のプライバシー</h2>
+            <p>本アプリは、13歳未満の児童を対象としていません。当社は、13歳未満の児童から個人情報を取得することを意図していません。保護者の方が、お子様が当社に個人情報を提供したことに気づかれた場合は、お問い合わせ先までご連絡ください。</p>
 
-        <h2>12. お問い合わせ</h2>
-        <p>本ポリシーまたは個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。</p>
-        <p>
-            Noluba, LLC.<br>
-            メール: <a href="mailto:contact@noluba.com">contact@noluba.com</a>
-        </p>
+            <h2>10. Cookieおよび類似技術</h2>
+            <p>本アプリはネイティブiOSアプリのため、Webブラウザ用のCookieは使用しません。認証維持のため、認証トークンを端末のKeychainに保存します。ユーザー設定情報の一部は端末のUserDefaultsに保存します。</p>
 
-        <div class="update-date">
-            制定日: 2026年5月25日<br>
-            最終更新日: 2026年5月25日
+            <h2>11. プライバシーポリシーの変更</h2>
+            <p>当社は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、本アプリ内の通知または当社サイトでお知らせします。変更後も本アプリの利用を継続された場合、変更後の本ポリシーに同意したものとみなします。</p>
+
+            <h2>12. お問い合わせ</h2>
+            <p>本ポリシーまたは個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。</p>
+            <p>Noluba, LLC.<br>メール: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <div class="update-date">制定日: 2026年5月25日<br>最終更新日: 2026年5月25日</div>
+        </div>
+
+        <!-- ============== English ============== -->
+        <div class="content-en">
+            <p>Noluba, LLC. ("we") establishes this Privacy Policy (the "Policy") regarding the handling of users' personal information in the iOS application "NolubaScope" (the "App") provided by us.</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>The App collects the following information to provide the service.</p>
+            <table>
+                <thead><tr><th>Category</th><th>Information collected</th></tr></thead>
+                <tbody>
+                    <tr><td>Account information</td><td>Email address, username (display name), password (stored as hash)</td></tr>
+                    <tr><td>Information via Google Sign-In</td><td>Email address, display name, and profile picture from Google account (only when Google Sign-In is used)</td></tr>
+                    <tr><td>Profile information</td><td>Avatar image, bio, team affiliation</td></tr>
+                    <tr><td>User content</td><td>Uploaded videos and related metadata (title, comment, difficulty, practice location), comments and likes on other users' posts, follow relationships</td></tr>
+                    <tr><td>Identifiers</td><td>User ID issued by us</td></tr>
+                    <tr><td>Usage information</td><td>Access logs, IP address, OS version, app version, usage timestamps, and other technical information</td></tr>
+                </tbody>
+            </table>
+            <div class="highlight"><strong>About location:</strong> The App does not collect precise location data (GPS). "Practice location" is text freely entered by the user.</div>
+
+            <h2>2. Purposes of Use</h2>
+            <p>The collected information is used for the following purposes:</p>
+            <ul>
+                <li>Providing and operating the App (video upload/playback, comments, follows, video comparison, etc.)</li>
+                <li>User authentication and identity verification</li>
+                <li>Preventing fraud and Terms violations, ensuring security</li>
+                <li>Responding to user inquiries and providing support</li>
+                <li>Improving service quality and developing new features</li>
+                <li>Compliance with applicable laws and regulations</li>
+            </ul>
+
+            <h2>3. Disclosure to Third Parties</h2>
+            <p>We will not provide collected personal information to third parties, except in the following cases:</p>
+            <ul>
+                <li>Displaying user-posted videos, comments, and profile information set as "public" so that other users of the App can view them within the App</li>
+                <li>With the user's consent</li>
+                <li>As required by law</li>
+                <li>When necessary to protect the life, body, or property of a person and obtaining the user's consent is difficult</li>
+            </ul>
+            <p>The App also uses the following external services:</p>
+            <table>
+                <thead><tr><th>Service</th><th>Provider</th><th>Information / Purpose</th></tr></thead>
+                <tbody>
+                    <tr><td>Google Sign-In</td><td>Google LLC</td><td>User authentication (only when user uses Google Sign-In)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>4. Data Retention</h2>
+            <p>Collected personal information is retained while the user maintains an account in the App and for a reasonable period necessary to fulfill the purposes of use. Upon receiving a request to delete an account, we will delete the information within a reasonable period, except where retention is required by law.</p>
+
+            <h2>5. Where Data Is Stored</h2>
+            <p>Collected personal information is stored on servers operated by cloud service providers selected by us. Server locations may include Japan and other countries (e.g., the United States). We maintain appropriate security standards regardless of storage location.</p>
+
+            <h2>6. Security</h2>
+            <p>We take the following measures to prevent leakage, loss, or alteration of collected personal information:</p>
+            <ul>
+                <li>Encryption of communication channels (HTTPS)</li>
+                <li>Storing passwords as hashes</li>
+                <li>Secure storage of authentication tokens in the device Keychain</li>
+                <li>Protection against unauthorized server access</li>
+                <li>Employee training</li>
+            </ul>
+
+            <h2>7. User Rights</h2>
+            <p>Users have the following rights regarding their personal information:</p>
+            <ul>
+                <li>Request disclosure of information we hold</li>
+                <li>Request correction, addition, or deletion of inaccurate information</li>
+                <li>Request suspension of use or erasure</li>
+                <li>Request suspension of disclosure to third parties</li>
+            </ul>
+            <p>To make such requests, please contact us at the address at the end of this Policy.</p>
+
+            <h2>8. Account Deletion</h2>
+            <p>Users can delete their account at any time from the App's settings screen. Upon account deletion, profile information, uploaded videos, comments, and other content will be deleted from our servers within a reasonable period.</p>
+
+            <h2>9. Children's Privacy</h2>
+            <p>The App is not directed at children under 13 years of age. We do not intend to collect personal information from children under 13. If a parent or guardian becomes aware that their child has provided personal information to us, please contact us at the address below.</p>
+
+            <h2>10. Cookies and Similar Technologies</h2>
+            <p>The App is a native iOS app and does not use web browser cookies. To maintain authentication, authentication tokens are stored in the device's Keychain. Some user settings are stored in the device's UserDefaults.</p>
+
+            <h2>11. Changes to This Policy</h2>
+            <p>We may modify this Policy as needed. For important changes, we will provide notice through in-app notifications or on our website. By continuing to use the App after such changes, you are deemed to have agreed to the revised Policy.</p>
+
+            <h2>12. Contact</h2>
+            <p>For inquiries about this Policy or our handling of personal information, please contact:</p>
+            <p>Noluba, LLC.<br>Email: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <div class="update-date">Effective: May 25, 2026<br>Last updated: May 25, 2026</div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Noluba, LLC. &nbsp;|&nbsp; <a href="../index.html">トップへ戻る</a>
+        &copy; 2026 Noluba, LLC. &nbsp;|&nbsp; <a href="../index.html">Top</a>
     </footer>
 </body>
 </html>
