@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サポート / Support - NolubaScope</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #1f2937 0%, #0a0a0f 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+        .hero .app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #1f2937;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #84cc16;
+        }
+        h2:first-of-type { margin-top: 0; }
+        h3 {
+            color: #374151;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #65a30d; }
+        a:hover { color: #4d7c0f; }
+        .highlight {
+            background-color: #f7fee7;
+            border-left: 4px solid #84cc16;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .contact-card {
+            background-color: #ecfccb;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            color: #365314;
+        }
+        .contact-card .email {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 6px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.9); }
+
+        /* ---------- 言語切替（CSS のみ） ---------- */
+        .lang-radio { position: absolute; left: -9999px; }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 0 auto 28px;
+        }
+        .tab {
+            padding: 8px 24px;
+            cursor: pointer;
+            border-radius: 7px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+            user-select: none;
+        }
+        .tab:hover { color: #1f2937; }
+
+        .title-ja, .title-en, .content-ja, .content-en { display: none; }
+
+        #lang-ja:checked ~ .hero .title-ja,
+        #lang-ja:checked ~ .container .content-ja,
+        #lang-en:checked ~ .hero .title-en,
+        #lang-en:checked ~ .container .content-en { display: block; }
+
+        #lang-ja:checked ~ .container .tabs label[for="lang-ja"],
+        #lang-en:checked ~ .container .tabs label[for="lang-en"] {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="lang" id="lang-ja" class="lang-radio" checked>
+    <input type="radio" name="lang" id="lang-en" class="lang-radio">
+
+    <div class="hero">
+        <img src="icon.png" alt="NolubaScope" class="app-icon">
+        <h1 class="title-ja">サポート</h1>
+        <h1 class="title-en">Support</h1>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <label class="tab" for="lang-ja">日本語</label>
+            <label class="tab" for="lang-en">English</label>
+        </div>
+
+        <!-- ============== 日本語 ============== -->
+        <div class="content-ja">
+            <p>NolubaScope をご利用いただきありがとうございます。本ページでは、アプリに関するお問い合わせ方法とよくある質問をご案内します。</p>
+
+            <h2>お問い合わせ</h2>
+            <p>アプリの使い方、不具合のご報告、ご要望、アカウントに関するお問い合わせは、以下のメールアドレスまでご連絡ください。通常、2〜3営業日以内にご返信します。</p>
+            <div class="contact-card">
+                Noluba, LLC.<br>
+                <a class="email" href="mailto:contact@noluba.com">contact@noluba.com</a>
+            </div>
+            <div class="highlight">不具合のご報告の際は、<strong>ご利用端末（例: iPhone 15）、iOS バージョン、アプリのバージョン、発生した状況</strong>をあわせてお知らせいただけると、スムーズに対応できます。</div>
+
+            <h2>よくある質問</h2>
+
+            <h3>NolubaScope とは？</h3>
+            <p>トライアルバイク（オートバイトライアル競技）を楽しむ方向けの、動画投稿・コミュニティ共有・AI ライディングフォーム解析サービスです。</p>
+
+            <h3>AI 解析はどのように依頼しますか？</h3>
+            <p>AI 解析は動画の投稿者のみがリクエストできます。投稿時、または投稿後の任意のタイミングで動画詳細画面から解析をリクエストできます。解析結果は、重心バランス・ハンドル操作・体重移動・ライン取りの評価と改善アドバイスを含みます。</p>
+
+            <h3>投稿した動画を非公開にできますか？</h3>
+            <p>はい。動画は投稿時に「全体公開」または「非公開」を選択できます。</p>
+
+            <h3>アカウントを削除したい</h3>
+            <p>アプリ内の「設定 &gt; アカウント」からいつでもアカウントを削除できます。削除すると、プロフィール情報・投稿動画・コメント等は合理的な期間内にサーバーから削除されます。</p>
+
+            <h3>パスワードを忘れた</h3>
+            <p>ログイン画面の「パスワードをお忘れの場合」から、登録済みのメールアドレス宛にリセット用メールを送信できます。</p>
+
+            <h2>関連リンク</h2>
+            <ul>
+                <li><a href="terms-of-service.html">利用規約</a></li>
+                <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+            </ul>
+        </div>
+
+        <!-- ============== English ============== -->
+        <div class="content-en">
+            <p>Thank you for using NolubaScope. This page explains how to contact us and answers frequently asked questions about the app.</p>
+
+            <h2>Contact Us</h2>
+            <p>For questions about how to use the app, bug reports, feature requests, or account-related inquiries, please contact us at the email address below. We typically respond within 2–3 business days.</p>
+            <div class="contact-card">
+                Noluba, LLC.<br>
+                <a class="email" href="mailto:contact@noluba.com">contact@noluba.com</a>
+            </div>
+            <div class="highlight">When reporting a bug, please include your <strong>device (e.g., iPhone 15), iOS version, app version, and a description of what happened</strong> so we can help you faster.</div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>What is NolubaScope?</h3>
+            <p>NolubaScope is a video sharing, community, and AI riding-form analysis service for people who enjoy motorcycle trials riding.</p>
+
+            <h3>How do I request an AI analysis?</h3>
+            <p>Only the person who posted a video can request an AI analysis. You can request it when uploading, or at any time afterward from the video detail screen. The result includes an evaluation of balance, handlebar control, weight transfer, and line choice, along with improvement advice.</p>
+
+            <h3>Can I make my uploaded video private?</h3>
+            <p>Yes. When uploading, you can choose to make a video either "public" or "private."</p>
+
+            <h3>How do I delete my account?</h3>
+            <p>You can delete your account at any time from "Settings &gt; Account" in the app. Once deleted, your profile information, uploaded videos, comments, and other content will be removed from our servers within a reasonable period.</p>
+
+            <h3>I forgot my password</h3>
+            <p>From the "Forgot your password?" link on the login screen, you can send a reset email to your registered email address.</p>
+
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Noluba, LLC. &nbsp;|&nbsp; <a href="../index.html">Top</a>
+    </footer>
+</body>
+</html>
