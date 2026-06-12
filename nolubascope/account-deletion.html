@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アカウントの削除 / Account Deletion - NolubaScope</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #1f2937;
+            background: linear-gradient(135deg, #1f2937 0%, #0a0a0f 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+        }
+        .hero .app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #1f2937;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #84cc16;
+        }
+        h2:first-of-type { margin-top: 0; }
+        h3 {
+            color: #374151;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #65a30d; }
+        a:hover { color: #4d7c0f; }
+        .highlight {
+            background-color: #f7fee7;
+            border-left: 4px solid #84cc16;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .update-date {
+            background-color: #ecfccb;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #365314;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+        th { background-color: #f3f4f6; font-weight: 600; }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.9); }
+
+        /* ---------- 言語切替（CSS のみ） ---------- */
+        .lang-radio { position: absolute; left: -9999px; }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            width: fit-content;
+            margin: 0 auto 28px;
+        }
+        .tab {
+            padding: 8px 24px;
+            cursor: pointer;
+            border-radius: 7px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+            user-select: none;
+        }
+        .tab:hover { color: #1f2937; }
+
+        .title-ja, .title-en, .content-ja, .content-en { display: none; }
+
+        #lang-ja:checked ~ .hero .title-ja,
+        #lang-ja:checked ~ .container .content-ja,
+        #lang-en:checked ~ .hero .title-en,
+        #lang-en:checked ~ .container .content-en { display: block; }
+
+        #lang-ja:checked ~ .container .tabs label[for="lang-ja"],
+        #lang-en:checked ~ .container .tabs label[for="lang-en"] {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="lang" id="lang-ja" class="lang-radio" checked>
+    <input type="radio" name="lang" id="lang-en" class="lang-radio">
+
+    <div class="hero">
+        <img src="icon.png" alt="NolubaScope" class="app-icon">
+        <h1 class="title-ja">アカウントの削除</h1>
+        <h1 class="title-en">Account Deletion</h1>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <label class="tab" for="lang-ja">日本語</label>
+            <label class="tab" for="lang-en">English</label>
+        </div>
+
+        <!-- ============== 日本語 ============== -->
+        <div class="content-ja">
+            <p>このページでは、Noluba, LLC.（以下「当社」といいます）が提供するアプリ「NolubaScope」のアカウントおよび関連データの削除方法について説明します。</p>
+
+            <h2>1. アプリ内でアカウントを削除する</h2>
+            <p>NolubaScope アプリ内から、いつでもご自身でアカウントを削除（退会）できます。</p>
+            <ol>
+                <li>NolubaScope アプリを開きます。</li>
+                <li>「設定」 → 「アカウント」を開きます。</li>
+                <li>「退会」セクションでパスワードを入力します（Googleログインのみで登録したアカウントを除く）。</li>
+                <li>「退会する」をタップし、確認すると削除が実行されます。</li>
+            </ol>
+            <div class="highlight">退会が完了すると、その場でログアウトされ、同じアカウントへ再ログインできなくなります。</div>
+
+            <h2>2. メールで削除をリクエストする</h2>
+            <p>アプリにアクセスできない場合は、登録済みのメールアドレスから下記宛に「アカウント削除希望」とご連絡ください。本人確認のうえ、当社にて削除を行います。</p>
+            <p>Noluba, LLC.<br>メール: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <h2>3. 削除・保持されるデータ</h2>
+            <p>アカウント削除のリクエストを受け付けると、当社が取得した個人情報は、法令上の保管義務がある情報を除き、合理的な期間内に当社のサーバーから削除されます。</p>
+            <table>
+                <thead><tr><th>データの種類</th><th>取り扱い</th><th>保持期間</th></tr></thead>
+                <tbody>
+                    <tr><td>アカウント情報（メールアドレス、ユーザー名、パスワード）</td><td>削除</td><td>合理的な期間内に削除</td></tr>
+                    <tr><td>プロフィール情報（アバター画像、自己紹介、所属チーム名）</td><td>削除</td><td>合理的な期間内に削除</td></tr>
+                    <tr><td>ユーザーコンテンツ（投稿動画、コメント、いいね、フォロー関係）</td><td>削除</td><td>合理的な期間内に削除</td></tr>
+                    <tr><td>識別子・利用状況情報（ユーザーID、アクセスログ、IPアドレス等）</td><td>削除</td><td>合理的な期間内に削除</td></tr>
+                    <tr><td>法令で保管が義務付けられている情報</td><td>保持</td><td>法令で定められた期間</td></tr>
+                </tbody>
+            </table>
+
+            <h2>4. 関連リンク</h2>
+            <ul>
+                <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                <li><a href="terms-of-service.html">利用規約</a></li>
+            </ul>
+
+            <div class="update-date">最終更新日: 2026年6月12日</div>
+        </div>
+
+        <!-- ============== English ============== -->
+        <div class="content-en">
+            <p>This page explains how to delete your account and related data for "NolubaScope", an app provided by Noluba, LLC. ("we").</p>
+
+            <h2>1. Delete your account in the app</h2>
+            <p>You can delete your account yourself at any time within the NolubaScope app.</p>
+            <ol>
+                <li>Open the NolubaScope app.</li>
+                <li>Go to <strong>Settings</strong> &rarr; <strong>Account</strong>.</li>
+                <li>In the <strong>Delete account</strong> section, enter your password (except for accounts registered with Google Sign-In only).</li>
+                <li>Tap <strong>Delete account</strong> and confirm. Your account will be deleted.</li>
+            </ol>
+            <div class="highlight">Once completed, you are signed out immediately and can no longer sign in to the same account.</div>
+
+            <h2>2. Request deletion by email</h2>
+            <p>If you cannot access the app, email us from your registered email address with the subject "Account deletion request". We will delete your account after verifying your identity.</p>
+            <p>Noluba, LLC.<br>Email: <a href="mailto:contact@noluba.com">contact@noluba.com</a></p>
+
+            <h2>3. Data that is deleted and retained</h2>
+            <p>When we receive an account deletion request, the personal information we have collected will be deleted from our servers within a reasonable period, except for information we are legally required to retain.</p>
+            <table>
+                <thead><tr><th>Data type</th><th>Action</th><th>Retention period</th></tr></thead>
+                <tbody>
+                    <tr><td>Account information (email, username, password)</td><td>Deleted</td><td>Within a reasonable period</td></tr>
+                    <tr><td>Profile information (avatar image, bio, team affiliation)</td><td>Deleted</td><td>Within a reasonable period</td></tr>
+                    <tr><td>User content (uploaded videos, comments, likes, follow relationships)</td><td>Deleted</td><td>Within a reasonable period</td></tr>
+                    <tr><td>Identifiers & usage information (user ID, access logs, IP address, etc.)</td><td>Deleted</td><td>Within a reasonable period</td></tr>
+                    <tr><td>Information we are legally required to retain</td><td>Retained</td><td>As required by law</td></tr>
+                </tbody>
+            </table>
+
+            <h2>4. Related links</h2>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+
+            <div class="update-date">Last updated: June 12, 2026</div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Noluba, LLC. &nbsp;|&nbsp; <a href="../index.html">Top</a>
+    </footer>
+</body>
+</html>
